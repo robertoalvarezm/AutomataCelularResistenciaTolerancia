@@ -1,5 +1,6 @@
 # Set the size of the grid
 grid.size <- 100
+n<-grid.size
 
 # Create a matrix to represent the grid
 grid <- matrix(rep(1,grid.size*grid.size),nrow=grid.size, ncol=grid.size)
@@ -70,7 +71,7 @@ for (iteration in 1:max.iterations) {
       out[iteration,3]<- table(grid)[[2]]
       out[iteration,4] <-0  
     }
-    image(grid,col=c("deeppink","grey50","seagreen1"),add=F,,zlim=c(1,3)) 
+    image(grid,col=c("deeppink","grey50","seagreen1"),add=F,zlim=c(1,3)) 
     grid(nx=n,ny=n,col="grey70",lty=1)
     Sys.sleep(0.01) 
   
